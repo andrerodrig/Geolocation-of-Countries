@@ -1,0 +1,3 @@
+SELECT "world_worldborder"."id", "world_worldborder"."name", "world_worldborder"."area", "world_worldborder"."pop2005", "world_worldborder"."fips", "world_worldborder"."iso2", "world_worldborder"."iso3", "world_worldborder"."un", "world_worldborder"."region", "world_worldborder"."subregion", "world_worldborder"."lon", "world_worldborder"."lat", "world_worldborder"."mpoly"::bytea
+FROM "world_worldborder"
+WHERE ST_Intersects("world_worldborder"."mpoly", ST_Transform(ST_GeomFromEWKB('\001\001\000\000 \214}\000\0003333\\\036-AfffFX\024PA'::bytea), 4326));
